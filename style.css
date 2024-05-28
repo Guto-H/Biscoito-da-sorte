@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --font-color: #34355B;
+}
+
+.hide{
+    display: none;
+}
+
+body{
+    background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main{
+    background-color: #FFFFFF;
+    width: 42.8rem;
+    color: var(--font-color);
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.screen1 h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+}
+
+.screen1{
+    margin: 4.8rem 6.4rem 6.4rem;
+}
+
+.screen1 p{
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.closedCookie{
+    background: none;
+    border: none;
+}
+
+.screen2{
+    margin: 4.8rem 6.4rem 6.4rem;
+
+   
+    background-repeat: no-repeat;
+    background-position: 1em;
+}
+
+.screen2 h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+section{
+    background-image: url(./img/opened-cookie.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    height: 18rem;
+    margin-top: 15rem;
+}
+
+.text{
+    background-color: #E4EDF1;
+    padding: 1rem;
+    box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 50%);
+
+    font-family: "Dancing Script", cursive;
+    font-size: 2.4rem;
+
+    animation-name: upText;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation-fill-mode: both;
+
+}
+
+.openedCookie{
+    margin: 3.5rem 0;
+}
+
+.novoBiscoito{
+    padding: 1.6rem;
+    background-color: #FF9500;
+    color: #FFFFFF;
+    font-family: "DM Sans", sans-serif;
+
+    border: none;
+    border-radius: .4rem;
+}
+
+.novoBiscoito:hover{
+    cursor: pointer;
+}
+
+
+.closedCookie:hover {
+    cursor: pointer;
+    animation-name: move;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+
+@keyframes move{
+
+    0% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+    }
+    
+    80% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+    }
+    
+    100% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+    }
+    
+}
+
+@keyframes upText{
+    0% {
+        transform: scale(0) translateZ(0) translateY(0) ;
+        opacity: 0;
+      }
+      100% {
+            transform: scale(1) translateZ(160px) translateY(-12rem);
+        opacity: 1;
+      }
+    
+}
